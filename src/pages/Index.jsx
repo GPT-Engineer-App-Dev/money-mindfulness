@@ -1,27 +1,11 @@
 import { Box, Container, Flex, Heading, Text, VStack, Link, Image } from "@chakra-ui/react";
+import Navbar from "../components/Navbar";
 import { Link as RouterLink } from "react-router-dom";
 
 const Index = () => {
   return (
     <Container maxW="container.xl" p={0} bg="#fff1e5">
-      <Flex as="nav" bg="gray.800" color="white" p={4} justifyContent="space-between" alignItems="center">
-        <Heading as="h1" size="lg">
-          <Link as={RouterLink} to="/" _hover={{ textDecoration: "none" }}>
-            Financial Times
-          </Link>
-        </Heading>
-        <Flex>
-          <Link as={RouterLink} to="/" mx={2} _hover={{ textDecoration: "none" }}>
-            Home
-          </Link>
-          <Link as={RouterLink} to="/about" mx={2} _hover={{ textDecoration: "none" }}>
-            About
-          </Link>
-          <Link as={RouterLink} to="/contact" mx={2} _hover={{ textDecoration: "none" }}>
-            Contact
-          </Link>
-        </Flex>
-      </Flex>
+      <Navbar />
 
       <Flex direction={{ base: "column", md: "row" }} mt={4}>
         <Box flex="3" p={4}>
